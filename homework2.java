@@ -1,10 +1,11 @@
 import java.util.*;
+import java.util.logging.Logger;
 
 public class homework2 {
     public static void main(String[] args) {
         String ls = "(()())(())";
-        System.out.println(ls);
-        System.out.println(deleteFirstAndOut(ls));
+        logger(ls);
+        logger(deleteFirstAndOut(ls));
     }
 
     public static String deleteFirstAndOut(String str) {
@@ -18,5 +19,10 @@ public class homework2 {
         }
 
         return result;
+    }
+
+    public static void logger(String message) {
+        Logger l = Logger.getAnonymousLogger();
+        l.info(message);
     }
 }
